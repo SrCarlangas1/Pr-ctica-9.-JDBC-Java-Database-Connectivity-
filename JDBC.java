@@ -24,7 +24,7 @@ public class JDBC {
                     + "alhost:3306/beer", "root", "12345");
             conexion.setAutoCommit(false);
             while (!salir) {
-                JOptionPane.showMessageDialog(null, "Bienvenidos");
+                System.out.println("Bienvenidos");
                 System.out.println("1. Consultar la Base de Datos");
                 System.out.println("2. Update en la Base de Datos");
                 System.out.println("3. Insert en la Base de Datos");
@@ -121,7 +121,7 @@ public class JDBC {
             conexion.rollback();
         } catch (SQLException ex) {
             Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null,
-                    ex);
+                    "No se ha insertado correctamente");
         }
     }
 }
